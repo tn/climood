@@ -1,7 +1,7 @@
 {
   "name": "climood",
   "description": "Mood tracking cli app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "tn @tn",
   "bin": {
     "climood": "./bin/run"

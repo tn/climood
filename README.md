@@ -19,7 +19,7 @@ $ npm install -g climood
 $ climood COMMAND
 running command...
 $ climood (-v|--version|version)
-climood/0.0.2 darwin-x64 node-v16.9.1
+climood/0.0.3 darwin-x64 node-v16.9.1
 $ climood --help [COMMAND]
 USAGE
   $ climood COMMAND
@@ -49,7 +49,7 @@ OPTIONS
   --text=text
 ```
 
-_See code: [src/commands/add.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/tn/climood/blob/v0.0.3/src/commands/add.ts)_
 
 ## `climood help [COMMAND]`
 
@@ -77,7 +77,7 @@ USAGE
   $ climood reset
 ```
 
-_See code: [src/commands/reset.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/reset.ts)_
+_See code: [src/commands/reset.ts](https://github.com/tn/climood/blob/v0.0.3/src/commands/reset.ts)_
 
 ## `climood stats`
 
@@ -90,11 +90,11 @@ USAGE
 OPTIONS
   -d, --detail          Render text of mood in list
 
-  -p, --period=w|m|y|a  [default: w] You can filter records by passing date period; w - 1 week or last 7 days, m - 1
-                        month or last 30 days, y - 1 year or last 365 days, a - for all time
+  -p, --period=w|m|y|a  [default: w] You can filter records by passing date period; w - current week, m - current month,
+                        y - current year, a - for all time
 
   --plot                Render stats with plot chart
 ```
 
-_See code: [src/commands/stats.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/stats.ts)_
+_See code: [src/commands/stats.ts](https://github.com/tn/climood/blob/v0.0.3/src/commands/stats.ts)_
 <!-- commandsstop -->
