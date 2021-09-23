@@ -26,7 +26,7 @@ export default class Stats extends Command {
 
   static flags = {
     period: flags.string({
-      description: 'You can filter records by passing date period; w - 1 week or last 7 days, m - 1 month or last 30 days, y - 1 year or last 365 days, a - for all time',
+      description: 'You can filter records by passing date period; w - current week, m - current month, y - current year, a - for all time',
       options: ['w', 'm', 'y', 'a'],
       default: 'w',
       required: false,
