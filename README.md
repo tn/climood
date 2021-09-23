@@ -19,7 +19,7 @@ $ npm install -g climood
 $ climood COMMAND
 running command...
 $ climood (-v|--version|version)
-climood/0.0.1 darwin-x64 node-v15.14.0
+climood/0.0.2 darwin-x64 node-v16.9.1
 $ climood --help [COMMAND]
 USAGE
   $ climood COMMAND
@@ -29,26 +29,27 @@ USAGE
 # Commands
 <!-- commands -->
 * [`climood add`](#climood-add)
-* [`climood help`](#climood-help-command)
+* [`climood help [COMMAND]`](#climood-help-command)
 * [`climood reset`](#climood-reset)
 * [`climood stats`](#climood-stats)
 
 ## `climood add`
 
-save mood of the day
+Save mood of the day
 
 ```
 USAGE
   $ climood add
 
 OPTIONS
-  --job=Main job|Side project|Open Source
-  --mood=-2|-1|0|1|2
-  --text="Lorem ipsum"
   --condition=Procrastinated|Motivated|Tired
+  --[no-]describe
+  --job=Main job|Side project|Other
+  --mood=2|1|0|-1|-2
+  --text=text
 ```
 
-_See code: [src/commands/add.ts](https://github.com/tn/climood/blob/v0.0.1/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/add.ts)_
 
 ## `climood help [COMMAND]`
 
@@ -65,36 +66,35 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 
 ## `climood reset`
 
-delete database
+Reset database
 
 ```
 USAGE
   $ climood reset
-
-OPTIONS
-  -h, --help       show CLI help
 ```
 
-_See code: [src/commands/reset.ts](https://github.com/tn/climood/blob/v0.0.1/src/commands/reset.ts)_
+_See code: [src/commands/reset.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/reset.ts)_
 
 ## `climood stats`
 
-display statistics
+Shows your moods stat
 
 ```
 USAGE
   $ climood stats
 
 OPTIONS
-  -h, --help               show CLI help
-  -p, --period=a|y|m|w     filter results by date period, default: w
-  --plot=true|false        show results as plot
-  -d, --detail=true|false  show detailed text
+  -d, --detail          Render text of mood in list
+
+  -p, --period=w|m|y|a  [default: w] You can filter records by passing date period; w - 1 week or last 7 days, m - 1
+                        month or last 30 days, y - 1 year or last 365 days, a - for all time
+
+  --plot                Render stats with plot chart
 ```
 
-_See code: [src/commands/stats.ts](https://github.com/tn/climood/blob/v0.0.1/src/commands/stats.ts)_
+_See code: [src/commands/stats.ts](https://github.com/tn/climood/blob/v0.0.2/src/commands/stats.ts)_
 <!-- commandsstop -->
